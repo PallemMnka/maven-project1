@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.mulesoft.ScatterGatherLabTestCase
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.962 sec <<< FAILURE! - in com.mulesoft.ScatterGatherLabTestCase
+testAuctionService(com.mulesoft.ScatterGatherLabTestCase)  Time elapsed: 4.719 sec  <<< ERROR!
+org.mule.api.config.ConfigurationException: Error creating bean with name 'HTTP_Listener_8081': Initialization of bean failed; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert property value of type [java.lang.String] to required type [int] for property 'port'; nested exception is java.lang.NumberFormatException: For input string: "${http.port}" (org.mule.api.lifecycle.InitialisationException)
+Caused by: org.mule.api.lifecycle.InitialisationException: Error creating bean with name 'HTTP_Listener_8081': Initialization of bean failed; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert property value of type [java.lang.String] to required type [int] for property 'port'; nested exception is java.lang.NumberFormatException: For input string: "${http.port}"
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'HTTP_Listener_8081': Initialization of bean failed; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert property value of type [java.lang.String] to required type [int] for property 'port'; nested exception is java.lang.NumberFormatException: For input string: "${http.port}"
+Caused by: org.springframework.beans.TypeMismatchException: Failed to convert property value of type [java.lang.String] to required type [int] for property 'port'; nested exception is java.lang.NumberFormatException: For input string: "${http.port}"
+Caused by: java.lang.NumberFormatException: For input string: "${http.port}"
+
